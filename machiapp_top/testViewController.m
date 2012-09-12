@@ -39,7 +39,7 @@
         return YES;
     } else {
         // メールアドレスは1件だけ
-        NSString* email = (NSString*)ABMultiValueCopyValueAtIndex(multi, 0);
+        NSString* email = (__bridge NSString*)ABMultiValueCopyValueAtIndex(multi, 0);
         NSLog(@"email = %@", email);
        // [email release];
         [self dismissModalViewControllerAnimated:YES];
@@ -51,9 +51,9 @@
     // 選択したメールアドレスを取り出す
     ABMutableMultiValueRef multi = ABRecordCopyValue(person, property);
     CFIndex index = ABMultiValueGetIndexForIdentifier(multi, identifier);
-    NSString* email = (NSString*)ABMultiValueCopyValueAtIndex(multi, index);
+    NSString* email = (__bridge NSString*)ABMultiValueCopyValueAtIndex(multi, index);
     NSLog(@"email = %@", email);
-    [email release];
+    //[email release];
     
     [self dismissModalViewControllerAnimated:YES];
     return NO;
@@ -86,6 +86,5 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)tapAddAddress:(id)sender {
-}
+
 @end
