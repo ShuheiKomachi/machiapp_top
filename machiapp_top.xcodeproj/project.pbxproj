@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		434AE8281600579A00C8D5BD /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434AE8271600579900C8D5BD /* testViewController.m */; };
 		434AE82B160057E700C8D5BD /* sampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434AE82A160057E700C8D5BD /* sampleViewController.m */; };
+		434AE82D160066E100C8D5BD /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434AE82C160066E100C8D5BD /* AddressBook.framework */; };
+		434AE82F160066E500C8D5BD /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434AE82E160066E500C8D5BD /* AddressBookUI.framework */; };
+		434AE831160066EE00C8D5BD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434AE830160066EE00C8D5BD /* CoreLocation.framework */; };
+		434AE833160066F800C8D5BD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434AE832160066F800C8D5BD /* MapKit.framework */; };
 		4396232915FEFEDC00EF0DBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4396232815FEFEDC00EF0DBA /* UIKit.framework */; };
 		4396232B15FEFEDC00EF0DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4396232A15FEFEDC00EF0DBA /* Foundation.framework */; };
 		4396232D15FEFEDC00EF0DBA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4396232C15FEFEDC00EF0DBA /* CoreGraphics.framework */; };
@@ -36,10 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		434AE8261600579900C8D5BD /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
-		434AE8271600579900C8D5BD /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
+		434AE8261600579900C8D5BD /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testViewController.h; path = machiapp_top/testViewController.h; sourceTree = "<group>"; };
+		434AE8271600579900C8D5BD /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testViewController.m; path = machiapp_top/testViewController.m; sourceTree = "<group>"; };
 		434AE829160057E700C8D5BD /* sampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sampleViewController.h; sourceTree = "<group>"; };
 		434AE82A160057E700C8D5BD /* sampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sampleViewController.m; sourceTree = "<group>"; };
+		434AE82C160066E100C8D5BD /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		434AE82E160066E500C8D5BD /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		434AE830160066EE00C8D5BD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		434AE832160066F800C8D5BD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4396232415FEFEDC00EF0DBA /* machiapp_top.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = machiapp_top.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4396232815FEFEDC00EF0DBA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4396232A15FEFEDC00EF0DBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +75,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434AE833160066F800C8D5BD /* MapKit.framework in Frameworks */,
+				434AE831160066EE00C8D5BD /* CoreLocation.framework in Frameworks */,
+				434AE82F160066E500C8D5BD /* AddressBookUI.framework in Frameworks */,
+				434AE82D160066E100C8D5BD /* AddressBook.framework in Frameworks */,
 				4396232915FEFEDC00EF0DBA /* UIKit.framework in Frameworks */,
 				4396232B15FEFEDC00EF0DBA /* Foundation.framework in Frameworks */,
 				4396232D15FEFEDC00EF0DBA /* CoreGraphics.framework in Frameworks */,
@@ -89,7 +101,13 @@
 		4396231915FEFEDC00EF0DBA = {
 			isa = PBXGroup;
 			children = (
+				434AE832160066F800C8D5BD /* MapKit.framework */,
+				434AE830160066EE00C8D5BD /* CoreLocation.framework */,
+				434AE82E160066E500C8D5BD /* AddressBookUI.framework */,
+				434AE82C160066E100C8D5BD /* AddressBook.framework */,
 				4396235D15FEFFDA00EF0DBA /* machiawase.jpg */,
+				434AE8261600579900C8D5BD /* testViewController.h */,
+				434AE8271600579900C8D5BD /* testViewController.m */,
 				4396232E15FEFEDC00EF0DBA /* machiapp_top */,
 				4396234C15FEFEDC00EF0DBA /* machiapp_topTests */,
 				4396232715FEFEDC00EF0DBA /* Frameworks */,
@@ -121,8 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				4396233715FEFEDC00EF0DBA /* AppDelegate.h */,
-				434AE8261600579900C8D5BD /* testViewController.h */,
-				434AE8271600579900C8D5BD /* testViewController.m */,
 				4396233815FEFEDC00EF0DBA /* AppDelegate.m */,
 				434AE829160057E700C8D5BD /* sampleViewController.h */,
 				434AE82A160057E700C8D5BD /* sampleViewController.m */,

@@ -166,6 +166,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapAddAddress:" destination="nqI-Zb-NSi" eventType="touchUpInside" id="d8w-dP-Ss1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lkm-up-Tsa">
                                 <rect key="frame" x="20" y="113" width="184" height="37"/>
@@ -351,6 +354,9 @@
         </class>
         <class className="testViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/testViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="tapAddAddress:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
