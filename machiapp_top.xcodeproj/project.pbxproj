@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434AE8281600579A00C8D5BD /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434AE8271600579900C8D5BD /* testViewController.m */; };
+		434AE82B160057E700C8D5BD /* sampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434AE82A160057E700C8D5BD /* sampleViewController.m */; };
 		4396232915FEFEDC00EF0DBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4396232815FEFEDC00EF0DBA /* UIKit.framework */; };
 		4396232B15FEFEDC00EF0DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4396232A15FEFEDC00EF0DBA /* Foundation.framework */; };
 		4396232D15FEFEDC00EF0DBA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4396232C15FEFEDC00EF0DBA /* CoreGraphics.framework */; };
@@ -20,6 +22,7 @@
 		4396234915FEFEDC00EF0DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4396232A15FEFEDC00EF0DBA /* Foundation.framework */; };
 		4396235115FEFEDC00EF0DBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4396234F15FEFEDC00EF0DBA /* InfoPlist.strings */; };
 		4396235415FEFEDC00EF0DBA /* machiapp_topTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396235315FEFEDC00EF0DBA /* machiapp_topTests.m */; };
+		4396235E15FEFFDA00EF0DBA /* machiawase.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4396235D15FEFFDA00EF0DBA /* machiawase.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		434AE8261600579900C8D5BD /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
+		434AE8271600579900C8D5BD /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
+		434AE829160057E700C8D5BD /* sampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sampleViewController.h; sourceTree = "<group>"; };
+		434AE82A160057E700C8D5BD /* sampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sampleViewController.m; sourceTree = "<group>"; };
 		4396232415FEFEDC00EF0DBA /* machiapp_top.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = machiapp_top.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4396232815FEFEDC00EF0DBA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4396232A15FEFEDC00EF0DBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,6 +59,7 @@
 		4396235015FEFEDC00EF0DBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4396235215FEFEDC00EF0DBA /* machiapp_topTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = machiapp_topTests.h; sourceTree = "<group>"; };
 		4396235315FEFEDC00EF0DBA /* machiapp_topTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = machiapp_topTests.m; sourceTree = "<group>"; };
+		4396235D15FEFFDA00EF0DBA /* machiawase.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = machiawase.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		4396231915FEFEDC00EF0DBA = {
 			isa = PBXGroup;
 			children = (
+				4396235D15FEFFDA00EF0DBA /* machiawase.jpg */,
 				4396232E15FEFEDC00EF0DBA /* machiapp_top */,
 				4396234C15FEFEDC00EF0DBA /* machiapp_topTests */,
 				4396232715FEFEDC00EF0DBA /* Frameworks */,
@@ -112,7 +121,11 @@
 			isa = PBXGroup;
 			children = (
 				4396233715FEFEDC00EF0DBA /* AppDelegate.h */,
+				434AE8261600579900C8D5BD /* testViewController.h */,
+				434AE8271600579900C8D5BD /* testViewController.m */,
 				4396233815FEFEDC00EF0DBA /* AppDelegate.m */,
+				434AE829160057E700C8D5BD /* sampleViewController.h */,
+				434AE82A160057E700C8D5BD /* sampleViewController.m */,
 				4396233A15FEFEDC00EF0DBA /* MainStoryboard.storyboard */,
 				4396233D15FEFEDC00EF0DBA /* ViewController.h */,
 				4396233E15FEFEDC00EF0DBA /* ViewController.m */,
@@ -224,6 +237,7 @@
 			files = (
 				4396233315FEFEDC00EF0DBA /* InfoPlist.strings in Resources */,
 				4396233C15FEFEDC00EF0DBA /* MainStoryboard.storyboard in Resources */,
+				4396235E15FEFFDA00EF0DBA /* machiawase.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +275,8 @@
 				4396233515FEFEDC00EF0DBA /* main.m in Sources */,
 				4396233915FEFEDC00EF0DBA /* AppDelegate.m in Sources */,
 				4396233F15FEFEDC00EF0DBA /* ViewController.m in Sources */,
+				434AE8281600579A00C8D5BD /* testViewController.m in Sources */,
+				434AE82B160057E700C8D5BD /* sampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +450,7 @@
 				4396235915FEFEDC00EF0DBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4396235A15FEFEDC00EF0DBA /* Build configuration list for PBXNativeTarget "machiapp_topTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +459,7 @@
 				4396235C15FEFEDC00EF0DBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
