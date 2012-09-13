@@ -27,6 +27,10 @@
 		4396235115FEFEDC00EF0DBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4396234F15FEFEDC00EF0DBA /* InfoPlist.strings */; };
 		4396235415FEFEDC00EF0DBA /* machiapp_topTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396235315FEFEDC00EF0DBA /* machiapp_topTests.m */; };
 		4396235E15FEFFDA00EF0DBA /* machiawase.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4396235D15FEFFDA00EF0DBA /* machiawase.jpg */; };
+		43CDBFA81600CE0700E7CA4F /* mailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CDBFA71600CE0700E7CA4F /* mailViewController.m */; };
+		43CDBFAB1600CE8100E7CA4F /* mapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CDBFAA1600CE8100E7CA4F /* mapViewController.m */; };
+		43CDBFAE1600CEF900E7CA4F /* goViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CDBFAD1600CEF900E7CA4F /* goViewController.m */; };
+		43CDBFB11600CF6A00E7CA4F /* excuseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CDBFB01600CF6A00E7CA4F /* excuseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +46,8 @@
 /* Begin PBXFileReference section */
 		434AE8261600579900C8D5BD /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testViewController.h; path = machiapp_top/testViewController.h; sourceTree = "<group>"; };
 		434AE8271600579900C8D5BD /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testViewController.m; path = machiapp_top/testViewController.m; sourceTree = "<group>"; };
-		434AE829160057E700C8D5BD /* sampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sampleViewController.h; sourceTree = "<group>"; };
-		434AE82A160057E700C8D5BD /* sampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sampleViewController.m; sourceTree = "<group>"; };
+		434AE829160057E700C8D5BD /* sampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sampleViewController.h; path = machiapp_top/sampleViewController.h; sourceTree = "<group>"; };
+		434AE82A160057E700C8D5BD /* sampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sampleViewController.m; path = machiapp_top/sampleViewController.m; sourceTree = "<group>"; };
 		434AE82C160066E100C8D5BD /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		434AE82E160066E500C8D5BD /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		434AE830160066EE00C8D5BD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -68,6 +72,14 @@
 		4396235215FEFEDC00EF0DBA /* machiapp_topTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = machiapp_topTests.h; sourceTree = "<group>"; };
 		4396235315FEFEDC00EF0DBA /* machiapp_topTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = machiapp_topTests.m; sourceTree = "<group>"; };
 		4396235D15FEFFDA00EF0DBA /* machiawase.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = machiawase.jpg; sourceTree = "<group>"; };
+		43CDBFA61600CE0700E7CA4F /* mailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mailViewController.h; sourceTree = "<group>"; };
+		43CDBFA71600CE0700E7CA4F /* mailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mailViewController.m; sourceTree = "<group>"; };
+		43CDBFA91600CE8100E7CA4F /* mapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapViewController.h; sourceTree = "<group>"; };
+		43CDBFAA1600CE8100E7CA4F /* mapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapViewController.m; sourceTree = "<group>"; };
+		43CDBFAC1600CEF900E7CA4F /* goViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = goViewController.h; sourceTree = "<group>"; };
+		43CDBFAD1600CEF900E7CA4F /* goViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = goViewController.m; sourceTree = "<group>"; };
+		43CDBFAF1600CF6A00E7CA4F /* excuseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = excuseViewController.h; sourceTree = "<group>"; };
+		43CDBFB01600CF6A00E7CA4F /* excuseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = excuseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +118,18 @@
 				434AE82E160066E500C8D5BD /* AddressBookUI.framework */,
 				434AE82C160066E100C8D5BD /* AddressBook.framework */,
 				4396235D15FEFFDA00EF0DBA /* machiawase.jpg */,
+				43CDBFAF1600CF6A00E7CA4F /* excuseViewController.h */,
+				43CDBFB01600CF6A00E7CA4F /* excuseViewController.m */,
+				43CDBFAC1600CEF900E7CA4F /* goViewController.h */,
+				43CDBFAD1600CEF900E7CA4F /* goViewController.m */,
+				43CDBFA91600CE8100E7CA4F /* mapViewController.h */,
+				43CDBFAA1600CE8100E7CA4F /* mapViewController.m */,
 				434AE8261600579900C8D5BD /* testViewController.h */,
 				434AE8271600579900C8D5BD /* testViewController.m */,
+				43CDBFA61600CE0700E7CA4F /* mailViewController.h */,
+				43CDBFA71600CE0700E7CA4F /* mailViewController.m */,
+				434AE829160057E700C8D5BD /* sampleViewController.h */,
+				434AE82A160057E700C8D5BD /* sampleViewController.m */,
 				4396232E15FEFEDC00EF0DBA /* machiapp_top */,
 				4396234C15FEFEDC00EF0DBA /* machiapp_topTests */,
 				4396232715FEFEDC00EF0DBA /* Frameworks */,
@@ -140,8 +162,6 @@
 			children = (
 				4396233715FEFEDC00EF0DBA /* AppDelegate.h */,
 				4396233815FEFEDC00EF0DBA /* AppDelegate.m */,
-				434AE829160057E700C8D5BD /* sampleViewController.h */,
-				434AE82A160057E700C8D5BD /* sampleViewController.m */,
 				4396233A15FEFEDC00EF0DBA /* MainStoryboard.storyboard */,
 				4396233D15FEFEDC00EF0DBA /* ViewController.h */,
 				4396233E15FEFEDC00EF0DBA /* ViewController.m */,
@@ -293,6 +313,10 @@
 				4396233F15FEFEDC00EF0DBA /* ViewController.m in Sources */,
 				434AE8281600579A00C8D5BD /* testViewController.m in Sources */,
 				434AE82B160057E700C8D5BD /* sampleViewController.m in Sources */,
+				43CDBFA81600CE0700E7CA4F /* mailViewController.m in Sources */,
+				43CDBFAB1600CE8100E7CA4F /* mapViewController.m in Sources */,
+				43CDBFAE1600CEF900E7CA4F /* goViewController.m in Sources */,
+				43CDBFB11600CF6A00E7CA4F /* excuseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
