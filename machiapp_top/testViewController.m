@@ -21,7 +21,6 @@
     ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
     picker.peoplePickerDelegate = self;
     [self presentModalViewController:picker animated:YES];
-    //[picker release];
     
 }
 
@@ -85,6 +84,5 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
 
 @end

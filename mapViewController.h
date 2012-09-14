@@ -2,7 +2,7 @@
 //  mapViewController.h
 //  machiapp_top
 //
-//  Created by techcamp on 12/09/12.
+//  Created by techcamp on 12/09/13.
 //  Copyright (c) 2012年 techcamp. All rights reserved.
 //
 
@@ -11,9 +11,14 @@
 #import <MapKit/MapKit.h>
 
 @interface mapViewController : UIViewController
-<CLLocationManagerDelegate> {
-    CLLocationManager *lm;
+<CLLocationManagerDelegate>{
+    CLLocationManager *locationManager;
 }
 
 
+
+@property (weak, nonatomic) IBOutlet MKMapView *createmap;
+
 @end
+
+

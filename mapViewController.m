@@ -2,19 +2,17 @@
 //  mapViewController.m
 //  machiapp_top
 //
-//  Created by techcamp on 12/09/12.
+//  Created by techcamp on 12/09/13.
 //  Copyright (c) 2012年 techcamp. All rights reserved.
-//
 
 #import "mapViewController.h"
-#import <CoreLocation/CoreLocation.h>
-#import <MapKit/MapKit.h>
 
 @interface mapViewController ()
 
 @end
 
 @implementation mapViewController
+@synthesize createmap;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,59 +27,44 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    lm = [[CLLocationManager alloc] init];
-    if ([lm locationServicesEnabled]) {
-        lm.delegate = self;
-        lm.desiredAccuracy = kCLLocationAccuracyBest;
-        lm.distanceFilter = 1000.0f;
-        [lm startUpdatingLocation];
+    
+    MKCoordinateRegion region = self.createmap.region;
+    region.span.latitudeDelta = 0.01;
+    region.span.longitudeDelta = 0.01;
+    [self.createmap setRegion:region animated:YES];
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    [locationManager startUpdatingLocation];
+    
+    
     }
-   
-}
 
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdatetolocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    
+    
+    CLLocationCoordinate2D coordinate;
+    coordinate = newLocation.coordinate;
+    
+    MKCoordinateRegion region = createmap.region;
+    region.center.latitude = newLocation.coordinate.latitude;
+    region.center.longitude = newLocation.coordinate.longitude;
+    region.span.latitudeDelta = 0.01;
+    region.span.longitudeDelta = 0.01;
 
-- (void) locationManager: (CLLocationManager *) manager
-     didUpdateToLocation: (CLLocation *) newLocation
-            fromLocation: (CLLocation *) oldLocation{
-    NSString *lat = [[NSString alloc] initWithFormat:@"%g",
-                     newLocation.coordinate.latitude];
+    [createmap setRegion:region animated:YES];
+    [self.createmap setCenterCoordinate:newLocation.coordinate animated:YES];
     
-    NSString *lng = [[NSString alloc] initWithFormat:@"%g",
-                     newLocation.coordinate.longitude];
-  
-    NSString *acc = [[NSString alloc] initWithFormat:@"%g",
-                     newLocation.horizontalAccuracy];
-   
-    
-    //[acc release];
-    //[lat release];
-    //[lng release];
-    MKCoordinateSpan span;
-    span.latitudeDelta=.005;
-    span.longitudeDelta=.005;
-    
-    MKCoordinateRegion region;
-    region.center = newLocation.coordinate;
-    region.span=span;
-}
-
-- (void) locationManager: (CLLocationManager *) manager
-        didFailWithError: (NSError *) error {
-   
-    NSString *msg = @"Error obtaining location";
-    UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle:@"Error"
-                          message:msg
-                          delegate:nil
-                          cancelButtonTitle: @"Done"
-                          otherButtonTitles:nil];
-    [alert show];
-   // [msg release];
-   // [alert release];
 }
 
 - (void)viewDidUnload
 {
+    [self setCreatemap:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -90,5 +73,6 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 
 @end
