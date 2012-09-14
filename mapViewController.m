@@ -28,39 +28,36 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    MKCoordinateRegion region = self.createmap.region;
-    region.span.latitudeDelta = 0.01;
-    region.span.longitudeDelta = 0.01;
-    [self.createmap setRegion:region animated:YES];
-    
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    locationManager.distanceFilter = kCLDistanceFilterNone;
-    [locationManager startUpdatingLocation];
-    
-    
-    }
-
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdatetolocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
-{
-    
-    
-    CLLocationCoordinate2D coordinate;
-    coordinate = newLocation.coordinate;
-    
-    MKCoordinateRegion region = createmap.region;
-    region.center.latitude = newLocation.coordinate.latitude;
-    region.center.longitude = newLocation.coordinate.longitude;
-    region.span.latitudeDelta = 0.01;
-    region.span.longitudeDelta = 0.01;
-
-    [createmap setRegion:region animated:YES];
-    [self.createmap setCenterCoordinate:newLocation.coordinate animated:YES];
-    
+    createmap = [[MKMapView alloc] init];
+    createmap.frame = self.view.bounds;
+    createmap.mapType = MKMapTypeStandard;
+    createmap.showsUserLocation = YES;
+    [self.view addSubview:createmap];
+    [createmap.userLocation addObserver:self
+                            forKeyPath:@"location"
+                               options:0
+                               context:NULL];
 }
+
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    
+    // 地図の中心座標に現在地を設定
+    createmap.centerCoordinate = createmap.userLocation.location.coordinate;
+    
+    // 表示倍率の設定
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.0005, 0.0005);
+    MKCoordinateRegion region = MKCoordinateRegionMake(createmap.userLocation.coordinate, span);
+    [createmap setRegion:region animated:YES];
+    
+    // 一度しか更新しない場合はremoveする必要がある
+    [createmap.userLocation removeObserver:self forKeyPath:@"location"];
+}
+
+
 
 - (void)viewDidUnload
 {
