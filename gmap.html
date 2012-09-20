@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1138.47">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Hiragino Mincho ProN'}
+    span.s1 {font: 12.0px 'Hiragino Mincho ProN'}
+    span.s2 {font: 12.0px STSong}
+    span.s3 {font: 12.0px Times}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ja"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="utf-8"&gt;</p>
+<p class="p1">&lt;title&gt;Google Maps API ver 3 Sample/<span class="s1">グーグルマップ</span>API<span class="s1">サンプル</span>/Google Maps API<span class="s2">样品</span>&lt;/title&gt;</p>
+<p class="p1">&lt;link rel="stylesheet" href="css/main.css" type="text/css" media="all"&gt;</p>
+<p class="p1">&lt;script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;div id="gmap"&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;div id="result"&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;script type="text/javascript"&gt;</p>
+<p class="p1">var directionsService = new google.maps.DirectionsService();</p>
+<p class="p1">var directionsDisplay = new google.maps.DirectionsRenderer();</p>
+<p class="p1">var map = new google.maps.Map(</p>
+<p class="p1">document.getElementById("gmap"),{</p>
+<p class="p1">zoom : 8,</p>
+<p class="p1">center : new google.maps.LatLng(35.689160610317174, 139.70083951950073),</p>
+<p class="p1">mapTypeId : google.maps.MapTypeId.ROADMAP</p>
+<p class="p1">}</p>
+<p class="p1">);</p>
+<p class="p1">directionsDisplay.setMap(map);</p>
+<p class="p1">directionsService.route({</p>
+<p class="p1">origin : "<span class="s1">新宿駅</span>",</p>
+<p class="p1">waypoints: [ { location: "<span class="s1">鈴鹿駅</span>" }, { location :"<span class="s1">名古屋駅</span>" } ],</p>
+<p class="p1">destination: "<span class="s1">新潟駅</span>",</p>
+<p class="p1">travelMode: google.maps.DirectionsTravelMode.DRIVING</p>
+<p class="p1">},function(response, status){</p>
+<p class="p1">if (status == google.maps.DirectionsStatus.OK) {</p>
+<p class="p1">directionsDisplay.setDirections(response);</p>
+<p class="p1">var m = 0;</p>
+<p class="p1">for(var i=0; i&lt;response.routes[0].legs.length; i++){</p>
+<p class="p1">m += response.routes[0].legs[i].distance.value; // <span class="s1">距離</span>(m)</p>
+<p class="p1">}</p>
+<p class="p1">document.getElementById("result").innerHTML = m+"<span class="s1">メートル</span>";</p>
+<p class="p1">}else{</p>
+<p class="p2"><span class="s3">alert("</span>ルート検索に失敗しました<span class="s3">");</span></p>
+<p class="p1">}</p>
+<p class="p1">});</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

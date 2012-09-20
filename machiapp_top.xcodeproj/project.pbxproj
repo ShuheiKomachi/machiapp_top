@@ -31,6 +31,7 @@
 		43DA395C1602B73400C5BAEF /* goViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DA395B1602B73400C5BAEF /* goViewController.m */; };
 		43DA39601602B74E00C5BAEF /* excuseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DA395F1602B74E00C5BAEF /* excuseViewController.m */; };
 		43DA39631602B84D00C5BAEF /* mailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DA39621602B84D00C5BAEF /* mailViewController.m */; };
+		43DDAC3A16082FAE000C41AD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DDAC3916082FAD000C41AD /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,7 @@
 /* Begin PBXFileReference section */
 		4321D48116016C2A0081E5ED /* mapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapViewController.h; sourceTree = "<group>"; };
 		4321D48216016C2A0081E5ED /* mapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapViewController.m; sourceTree = "<group>"; };
-		434AE8261600579900C8D5BD /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testViewController.h; path = machiapp_top/testViewController.h; sourceTree = "<group>"; };
+		434AE8261600579900C8D5BD /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testViewController.h; path = machiapp_top/testViewController.h; sourceTree = "<group>"; usesTabs = 0; };
 		434AE8271600579900C8D5BD /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testViewController.m; path = machiapp_top/testViewController.m; sourceTree = "<group>"; };
 		434AE829160057E700C8D5BD /* sampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sampleViewController.h; sourceTree = "<group>"; };
 		434AE82A160057E700C8D5BD /* sampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sampleViewController.m; sourceTree = "<group>"; };
@@ -79,7 +80,8 @@
 		43DA395E1602B74E00C5BAEF /* excuseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = excuseViewController.h; sourceTree = "<group>"; };
 		43DA395F1602B74E00C5BAEF /* excuseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = excuseViewController.m; sourceTree = "<group>"; };
 		43DA39611602B84D00C5BAEF /* mailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mailViewController.h; sourceTree = "<group>"; };
-		43DA39621602B84D00C5BAEF /* mailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mailViewController.m; sourceTree = "<group>"; };
+		43DA39621602B84D00C5BAEF /* mailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = mailViewController.m; sourceTree = "<group>"; };
+		43DDAC3916082FAD000C41AD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43DDAC3A16082FAE000C41AD /* MessageUI.framework in Frameworks */,
 				434AE833160066F800C8D5BD /* MapKit.framework in Frameworks */,
 				434AE831160066EE00C8D5BD /* CoreLocation.framework in Frameworks */,
 				434AE82F160066E500C8D5BD /* AddressBookUI.framework in Frameworks */,
@@ -143,6 +146,7 @@
 		4396232715FEFEDC00EF0DBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43DDAC3916082FAD000C41AD /* MessageUI.framework */,
 				434AE832160066F800C8D5BD /* MapKit.framework */,
 				434AE830160066EE00C8D5BD /* CoreLocation.framework */,
 				434AE82E160066E500C8D5BD /* AddressBookUI.framework */,

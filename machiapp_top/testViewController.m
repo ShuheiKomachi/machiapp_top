@@ -6,22 +6,26 @@
 //  Copyright (c) 2012年 techcamp. All rights reserved.
 //
 
+
 #import "testViewController.h"
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
+
 
 @interface testViewController ()
 
 @end
 
 @implementation testViewController
- 
+
 - (IBAction)tapAddAddress:(id)sender {
     
     ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
     picker.peoplePickerDelegate = self;
     [self presentModalViewController:picker animated:YES];
-    
+    //[picker release];
 }
 
 - (void)peoplePickerNavigationControllerDidCancel: (ABPeoplePickerNavigationController *)peoplePicker {
@@ -40,7 +44,7 @@
         // メールアドレスは1件だけ
         NSString* email = (__bridge NSString*)ABMultiValueCopyValueAtIndex(multi, 0);
         NSLog(@"email = %@", email);
-       // [email release];
+        // [email release];
         [self dismissModalViewControllerAnimated:YES];
         return NO;
     }
@@ -85,4 +89,14 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+// ここまでがアドレス帳参照
+
+
+
+- (IBAction)sendingEmail:(id)sender {
+ 	NSURL* mailURL = [NSURL URLWithString: @"mailto:satoko@somedomain.com?subject=My%20Subject&body=bodyStuff"];
+	NSLog(@"mailURL: %@", mailURL); //Debug
+    [[UIApplication sharedApplication] openURL: mailURL];
+}
 @end
+

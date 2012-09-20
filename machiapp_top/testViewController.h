@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
+
 
 @interface testViewController : UIViewController
-<ABPeoplePickerNavigationControllerDelegate> {
+ <ABPeoplePickerNavigationControllerDelegate> {
     
 }
 
-
-
+- (IBAction)sendingEmail:(id)sender;
  
 @end
